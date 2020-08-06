@@ -1,0 +1,127 @@
+html {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: white;
+
+    .container {
+        display: flex;
+        width: 1200px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.5em;
+
+        &::after {
+            position: absolute;
+            content: ".";
+            color: #68b3ff;
+            font-size: 1.8em;
+            top: 14px;
+        }
+    }
+
+    ul {
+        padding-right: 30px;
+
+        li {
+            list-style-type: none;
+            padding: 7px;
+            font-weight: 500;
+            color: #484848;
+        }
+    }
+
+    .links,
+    ul {
+        display: flex;
+        align-items: center;
+    }
+}
+
+button {
+    border: 0;
+    background-color: #3598dc;
+    color: white;
+    padding: 9px 11px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+section {
+    &#hero {
+        text-align: center;
+        h1 {
+            display: inline;
+        }
+    }
+}
+
+.typed-cursor {
+    font-size: 3em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
