@@ -1,3 +1,5 @@
+$primary-color: #3598dc;
+
 html {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
 }
@@ -12,7 +14,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 6px 5px #00000045;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -33,7 +35,7 @@ nav {
         &::after {
             position: absolute;
             content: ".";
-            color: #68b3ff;
+            color: $primary-color;
             font-size: 1.8em;
             top: 14px;
         }
@@ -46,7 +48,6 @@ nav {
             list-style-type: none;
             padding: 7px;
             font-weight: 500;
-            color: #484848;
         }
     }
 
@@ -55,21 +56,39 @@ nav {
         display: flex;
         align-items: center;
     }
+
+
+    a {
+        text-decoration: none;
+        color: #484848;
+        transition: color 0.2s linear;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 button {
     border: 0;
-    background-color: #3598dc;
+    background-color: $primary-color;
     color: white;
-    padding: 9px 11px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 30px;
     font-size: 0.9em;
     font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($primary-color, 20%) !important;
+        transition: background-color 0.3s linear;
+    }
 }
 
 section {
     &#hero {
         text-align: center;
+
         h1 {
             display: inline;
         }
@@ -90,7 +109,7 @@ p {
 
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
