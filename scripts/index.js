@@ -15,10 +15,12 @@ menuBtn.onclick = function () { openMenu() }
 function openMenu() {
     if (links.style.display == 'flex') {
         links.style.display = 'none';
-        menuBtn.src = 'media/menu.svg'
+        menuBtn.src = 'media/menu.svg';
+        menuBtn.style.filter = 'invert(0)';
 
     } else {
         links.style.display = 'flex';
-        menuBtn.src = 'media/close.svg'
+        menuBtn.src = 'media/close.svg';
+        menuBtn.style.filter = 'invert(1)';        
     }
 }
